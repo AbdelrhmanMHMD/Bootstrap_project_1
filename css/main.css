@@ -63,7 +63,7 @@ ul {
 /* END NavBar */
 /* START Landing */
 .landing {
-	min-height: calc(100vh - 72px);
+	min-height: 100vh;
 }
 /* END Landing */
 /* START Services */
