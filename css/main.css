@@ -1,0 +1,181 @@
+:root {
+	--dark-color: #19283f;
+	--red-color: #ff3150;
+	--green-color: #33d1cc;
+	--yellow-color: #ffc400;
+	--section-color: #eff7fa;
+}
+.bg-section {
+	background-color: var(--section-color);
+}
+.bg-dark-color{
+    background-color: var(--dark-color);
+}
+body {
+	font-family: "Roboto", sans-serif;
+	counter-reset: service;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+/* START Component */
+.main-btn,
+.main-btn:hover {
+	background-color: var(--red-color);
+	color: var(--yellow-color);
+	padding: 0.5rem 1rem;
+}
+/* END Component */
+/* START Component */
+.section-head::before {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 2px;
+	width: 150px;
+	background-color: var(--green-color);
+}
+/* END Component */
+/* START NavBar */
+.navbar .navbar-nav .nav-link {
+	font-weight: 500;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+	color: var(--green-color);
+}
+.navbar .search {
+	color: var(--green-color);
+	border-left: 2px solid var(--green-color);
+}
+
+.navbar .navbar-toggler {
+	border: 2px solid white;
+}
+.navbar .navbar-toggler:focus {
+	box-shadow: none;
+}
+/* END NavBar */
+/* START Landing */
+.landing {
+	min-height: calc(100vh - 72px);
+}
+/* END Landing */
+/* START Services */
+.services .service {
+	margin-top: 120px;
+}
+.services .service::before {
+	counter-increment: service;
+	content: counter(service);
+	position: absolute;
+	top: -150px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 170px;
+	color: var(--section-color);
+	font-family: "Font Awesome 6 Free";
+	z-index: -1;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+.services .service i {
+	color: var(--green-color);
+	font-size: 60px;
+}
+.services .service h4 {
+	color: var(--yellow-color);
+}
+/* END Services */
+/* START Portfolio */
+.portfolio ul li {
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+}
+.portfolio ul li:hover {
+	color: var(--red-color);
+}
+.portfolio ul li.active {
+	background-color: var(--red-color);
+	color: var(--yellow-color);
+	border: none;
+}
+.portfolio .image {
+	padding: 5px;
+	overflow: hidden;
+}
+.portfolio .image::before {
+	content: attr(data-work);
+	position: absolute;
+	top: 5px;
+	left: calc(-100% + 5px);
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background-color: #33d1ccdb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.portfolio .image:hover::before {
+	left: 5px;
+}
+/* END Portfolio */
+/* START About */
+.about .description {
+	max-width: 500px;
+}
+/* END About */
+/* START Team */
+.team .heading {
+	color: var(--yellow-color);
+}
+.team .box h4 {
+	background-color: var(--green-color);
+}
+/* END Team */
+/* START Subscribe */
+.subscribe {
+	background-color: var(--yellow-color);
+}
+.subscribe input[type="email"] {
+	border: none;
+	border-bottom: 2px solid white;
+}
+.subscribe input[type="email"]:focus {
+	outline: none;
+}
+.subscribe input[type="email"]::placeholder {
+	color: white;
+}
+/* END Subscribe */
+/* START footer */
+.footer .green {
+	color: var(--green-color);
+}
+.footer .yellow {
+	color: var(--yellow-color);
+}
+.footer .icons i.facebook {
+	background-color: #1877f2;
+}
+.footer .icons i.twitter {
+    background-color: #1da1f2;
+}
+.footer .icons i.linkedin {
+    background-color: #0a66c2;
+}
+.footer .icons i.youtube {
+    background-color: #ff0000;
+}
+/* END footer */
